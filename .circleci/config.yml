@@ -19,7 +19,7 @@ workflows:
   commit:
     jobs:
       - build
-  extend:
+  runex:
     when: << pipeline.parameters.run-schedule >>
     jobs:
       - build
