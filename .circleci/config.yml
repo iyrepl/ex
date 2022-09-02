@@ -1,4 +1,5 @@
 version: 2.1
+
 jobs:
   build:
     docker:
@@ -15,6 +16,11 @@ jobs:
       - run: 
           name: Extend
           command: python3 run.py -u $USERNAME -p $PASSWORD
+parameters:
+  run-schedule:
+    type: boolean
+    default: false
+
 workflows:
   commit:
     jobs:
