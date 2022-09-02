@@ -15,7 +15,7 @@ jobs:
           name: Extend
           command: python3 run.py -u $USERNAME -p $PASSWORD
 workflows:
-  version: 2
+  version: 2.1
   commit:
     jobs:
       - build
