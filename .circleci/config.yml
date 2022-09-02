@@ -17,11 +17,6 @@ jobs:
           name: Extend
           command: python3 run.py -u $USERNAME -p $PASSWORD
 
-parameters:
-  extend:
-    type: boolean
-    default: false
-
 workflows:
   commit:
     jobs:
@@ -30,6 +25,5 @@ workflows:
     when:
     and:
       - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-      - equal: [ "run-schedule", << pipeline.schedule.name >> ]
     jobs:
       - build
