@@ -21,9 +21,9 @@ workflows:
   commit:
     jobs:
       - build
-  extend:
-    when:
-    and:
-      - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-    jobs:
-      - build
+#  extend:#
+#    when:#
+#    and:#
+#      - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]#
+#    jobs:#
+#      - build#
